@@ -1,3 +1,7 @@
+@keyframes ganttspan {
+    from {opacity: 0;}
+    to {opacity: 100%;}
+}
 .row {
     margin: 0;
 }
@@ -29,6 +33,17 @@ body{
     font-weight: bold;
     border-radius: 10px;
 }
+hr {
+    /* height: 5px; */
+    width: 80%;
+    margin: 20px auto;
+    border: 1px solid gray;
+    opacity: 0.8;
+}
+h4 {
+    text-align: center;
+    font-size: 40px;
+}
 
 #inputtable {
     text-align: center;
@@ -49,6 +64,9 @@ body{
     text-align: center;
     margin: 1%;
     padding: 1%;
+}
+#ganttvalues {
+    animation: ganttspan 2s 5s;
 }
 
 #aligning label{
@@ -98,7 +116,15 @@ table, tr{
     background-color: burlywood;
     
 }
-
+.onhover {
+    transition: width 0.5s;
+    animation: ganttspan 5s;
+}
+.onhover:hover {
+    /* padding: 13px; */
+    width: 60px;
+    /* animation: gantt 2s; */
+}
 .gChart{
     /* width: 50px; */
     display: inline-block;
@@ -110,6 +136,12 @@ table, tr{
 .gChartValues{
     padding: 0;
     width: 50px;
-    margin-top: 50px;
+    margin-top: 20px;
     outline: none;
+    animation: ganttspan 5s;
+}
+#table td:hover, th:hover {
+    cursor: pointer;
+    color: black;
+    background-color: white;
 }
