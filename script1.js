@@ -7,13 +7,14 @@ class node{
         this.rt = bt;
     }
 }
+
 let a=[], b=[];
 function strf(){
     let tt=0, t=0, gantValues = 0 ;
-    for(i=0; i<a.length; i++)
+    for(let i=0; i<a.length; i++)
         tt += a[i].bt;
     while (t!=tt){
-        for(i=0; i<a.length; i++){
+        for(let i=0; i<a.length; i++){
             if(t==a[i].at){
                 b.push(a[i]);
                 b.sort(function(x, y){return x.rt-y.rt});
@@ -30,41 +31,7 @@ function strf(){
                 b.shift();
             }
         }
-    } 
-
-
-
-    // let id;
-    // id = setInterval(function()
-    // {
-    //     let tt=0, t=0, gantValues = 0 ;
-    //     if(t == tt)
-    //         clearInterval(id);
-    //     else
-    //     {
-    //         for(i=0; i<a.length; i++)
-    //             tt += a[i].bt;
-    //         for(i=0; i<a.length; i++){
-    //             if(t==a[i].at){
-    //                 b.push(a[i]);
-    //                 console.log(b);
-    //                 b.sort(function(x, y){return x.rt-y.rt});
-    //             }
-    //         }
-    //         t++;
-    //         if(b.length > 0){
-    //             // console.log("|P"+b[0].pid);
-    //             document.querySelector("#gantt").innerHTML += `<span class="gChart onhover" style = "background-color:${colors[b[0].pid-1]}; color:black; box-shadow: 0 0 5px white;">p${b[0].pid}</span>`;
-    //             document.querySelector("#gantvalues").innerHTML += `<span class="gChart gChartValues">${gantValues++}</span>`;
-    //             b[0].rt -= 1;
-    //             if(b[0].rt==0){
-    //                 b[0].ct=t;
-    //                 b.shift();
-    //             }
-    //             // console.log(b);
-    //         }
-    //     }
-    // }, 1000)
+    }
     document.querySelector("#gantvalues").innerHTML += `<span class="gChart gChartValues">${gantValues}</span>`; 
 }
 
@@ -96,6 +63,7 @@ document.querySelector("#submit").addEventListener("click", function () {
         document.querySelector("#submitAB").addEventListener("click",display);
     }
 });
+
 function display(){
     document.querySelector("h4").innerHTML += "<hr>GANTT CHART";
     // document.querySelector("#inputtable").innerHTML += `<div class="row">
