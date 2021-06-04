@@ -52,6 +52,7 @@ let avgWaitingTime = 0;
 let avgTAT = 0;
 // var sum = 0;
 var colors = ["orange", "yellow", "lightpurple", "pink", "green", "lightblue"];
+
 document.querySelector("#submit").addEventListener("click", function () {
     inputNumber = Number(document.querySelector("#input").value);
     if (inputNumber > 6) alert("Number should be greater than 0 and less than 7");
