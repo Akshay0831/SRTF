@@ -36,8 +36,10 @@ function strf(){
 }
 
 function display(){
-    let waitingTime = [], tat = [];
-    let avgWaitingTime = 0, avgTAT = 0;
+    let waitingTime = [];
+    let tat = [];
+    let avgWaitingTime = 0;
+    let avgTAT = 0;
     document.querySelector("h4").innerHTML += "<hr>GANTT CHART";
     document.querySelector("#inputtable").innerHTML += `<table id = "table"><thead>
     <tr>
